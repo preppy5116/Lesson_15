@@ -41,24 +41,24 @@ java -XX:+PrintCompilation -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining Tas
 объекты в разных областях памяти(heap).
 
     Реализация:
-//java -XX:+UseSerialGC Task2.java
-// serial = 216 collections, 10.5s
+java -XX:+UseSerialGC Task2.java <br />
+serial = 216 collections, 10.5s<br />
 ![img.png](src/main/resources/img.png)
 
-//java -XX:+IgnoreUnrecognizedVMOptions -XX:+UseConcMarkSweepGC Task2.java
-// ConcMarkSweep = 31 collections, 713.2ms
+java -XX:+IgnoreUnrecognizedVMOptions -XX:+UseConcMarkSweepGC Task2.java <br />
+ConcMarkSweep = 31 collections, 713.2ms <br />
 ![img_1.png](src/main/resources/img_1.png)
 
-//java -XX:+UseG1GC Task2.java
-// G1 = 30 collections, 657.9ms
+java -XX:+UseG1GC Task2.java <br />
+G1 = 30 collections, 657.9ms <br />
 ![img_2.png](src/main/resources/img_2.png)
 
-//java -XX:+IgnoreUnrecognizedVMOptions -XX:+UseParallelOldGC Task2.java
-// ParallelOldGC = , 31 collections, 687.1ms
+java -XX:+IgnoreUnrecognizedVMOptions -XX:+UseParallelOldGC Task2.java <br />
+ParallelOldGC = , 31 collections, 687.1ms <br />
 ![img_3.png](src/main/resources/img_3.png)
 
-//java -XX:+UseParallelGC Task2.java
-// ParallelGC = 21 collections, 1.253s
+java -XX:+UseParallelGC Task2.java<br />
+ParallelGC = 21 collections, 1.253s <br />
 ![img_4.png](src/main/resources/img_4.png)
 
 
